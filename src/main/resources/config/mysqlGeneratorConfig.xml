@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd"> 
+  
+
+<generatorConfiguration> 
+   
+  <context id="MyCommentGenerator" targetRuntime="MyBatis3">
+  
+	<!--去注释 -->
+ 	<commentGenerator>  
+<!--       	<property name="suppressAllComments" value="true" /> -->
+<!--       	<property name="suppressDate" value="true"/>   -->
+    </commentGenerator> 
+     
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/mysql"
+     userId="root" password="root123"/>
+    
+    <!-- 指定生成的类型为java类型，避免数据库中number等类型字段 -->
+    <javaTypeResolver>
+      <property name="forceBigDecimals" value="false"/>
+    </javaTypeResolver>
+    
+    <!-- 生成model模型，对应的包，存放位置可以指定具体的路径,如/ProjectName/src，也可以使用MAVEN来自动生成 -->
+    <javaModelGenerator targetPackage="com.akk.model" targetProject="MAVEN">
+      <property name="enableSubPackages" value="true"/>
+    </javaModelGenerator>
+    
+    <!--对应的xml mapper文件  -->
+    <sqlMapGenerator targetPackage="com.akk.dao.mapping" targetProject="MAVEN">
+      <property name="enableSubPackages" value="true"/>
+    </sqlMapGenerator>
+    
+    <!-- 对应的dao接口 -->
+    <javaClientGenerator type="XMLMAPPER" targetPackage="com.akk.dao" targetProject="MAVEN">
+      <property name="enableSubPackages" value="true"/>
+    </javaClientGenerator>
+    
+    
+	<!--<table tableName="yeqy_info" domainObjectName="PromotionYeqyInfoDto"/> -->
+
+	<!--不生成example -->
+    <!-- <table schema="general" tableName="info" domainObjectName="InfoDto"
+    enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+    enableSelectByExample="false" selectByExampleQueryId="false" >
+    <property name="autoDelimitKeywords" value="true"/>
+    </table> -->
+	
+	<!-- <table schema="general" tableName="ment_info" domainObjectName="MentInfoEntity"
+	    enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+	    enableSelectByExample="false" selectByExampleQueryId="false" >
+	</table>
+	
+	<table schema="general" tableName="user_test" domainObjectName="UserTest"
+	    enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+	    enableSelectByExample="false" selectByExampleQueryId="false" >
+	</table>
+  </context>
+</generatorConfiguration>
