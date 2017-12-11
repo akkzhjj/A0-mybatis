@@ -38,8 +38,6 @@
     </javaClientGenerator>
     
     
-	<!--<table tableName="yeqy_info" domainObjectName="PromotionYeqyInfoDto"/> -->
-
 	<!--不生成example -->
     <!-- <table schema="general" tableName="info" domainObjectName="InfoDto"
     enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
