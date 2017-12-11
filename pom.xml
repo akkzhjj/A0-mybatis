@@ -65,9 +65,9 @@
             <configurationFile>src/main/resources/config/mysqlGeneratorConfig.xml</configurationFile>
             <overwrite>true</overwrite>
             <jdbcDriver>com.mysql.jdbc.Driver</jdbcDriver>
-            <jdbcURL>jdbc:mysql://192.168.1.43:3306/fund_platform</jdbcURL>
-            <jdbcUserId>loanorg</jdbcUserId>
-            <jdbcPassword>loanorgpassword</jdbcPassword>
+            <jdbcURL>jdbc:mysql://192.168.1.43:3306/akk</jdbcURL>
+            <jdbcUserId>root</jdbcUserId>
+            <jdbcPassword>root123</jdbcPassword>
           </configuration>
         </execution>
       </executions>
